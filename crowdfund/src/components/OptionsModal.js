@@ -7,15 +7,16 @@ import ThanksModal from "./ThanksModal"
 const OptionsModal = ({options}) => {
   const [activeCard, setActiveCard]= useState("")
   const [activeModal, setActiveModal]=useState("")
-  const [payment, setPayment]=useState(null)
+  const [payment, setPayment]=useState("")
 
   const decide =(h) => {
     setActiveModal(h)
     setActiveCard("")
-    setPayment(null)
+    setPayment("")
   }
   const onCardClick = (index) => {
     setActiveCard(index)
+    setPayment("")
   } 
 
   const show = options.map((option) => {
