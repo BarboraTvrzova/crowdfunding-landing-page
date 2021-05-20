@@ -7,10 +7,12 @@ import ThanksModal from "./ThanksModal"
 const OptionsModal = ({options}) => {
   const [activeCard, setActiveCard]= useState("")
   const [activeModal, setActiveModal]=useState("")
+  const [payment, setPayment]=useState(null)
 
   const decide =(h) => {
     setActiveModal(h)
     setActiveCard("")
+    setPayment(null)
   }
   const onCardClick = (index) => {
     setActiveCard(index)
@@ -18,7 +20,6 @@ const OptionsModal = ({options}) => {
 
   const show = options.map((option) => {
     const active = option.type===activeCard? "active" : ""
-    
     
     return (
       <div key ={option.key} className={`${active}-card margin`}>
@@ -39,9 +40,9 @@ const OptionsModal = ({options}) => {
           <p>Enter your pledge</p>
           <div className="input-submit">
             <div className="btn enter-pledge">$
-             <input name="title undefined" className="payment" type="number" min={`${option.price}`} placeholder={option.price}  disabled={option.left=== 0? true : false}  />
+             <input name="payment" className="payment" type="number" min={`${option.price}`} placeholder={option.price}  disabled={option.left=== 0? true : false} value={payment} onChange={(e)=>{setPayment(e.target.value)}}/>
             </div>
-            <button className="btn green submit-pledge" disabled={option.left=== 0? true : false} onClick={()=>{
+            <button className={`${payment<option.price?"stop":""} btn green submit-pledge`}disabled={payment<option.price? true:false} onClick={()=>{
             decide("thanks")
             ;
           }}>Continue</button>

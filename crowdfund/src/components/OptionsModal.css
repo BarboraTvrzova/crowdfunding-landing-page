@@ -198,8 +198,25 @@
   border: none;
 }
 
+.payment:focus {
+  outline: none;
+}
+
+.payment:out-of-range {
+  color: rgba(0, 0, 0, 0.4);
+}
+
 .card-payment {
   display: none;
+}
+
+.stop {
+  cursor: unset;
+  background: rgba(47, 47, 47, 0.5);
+}
+.stop:hover {
+  cursor: unset;
+  background: rgba(47, 47, 47, 0.5);
 }
 
 @media (max-width: 729px) {
