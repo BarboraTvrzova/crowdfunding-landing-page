@@ -39,7 +39,7 @@ const OptionsModal = ({options}) => {
           <p>Enter your pledge</p>
           <div className="input-submit">
             <div className="btn enter-pledge">$
-             <input className="payment" type="number" min={`${option.price}`} placeholder={option.price}  disabled={option.left=== 0? true : false}  />
+             <input name="payment" className="payment" type="number" min={`${option.price}`} placeholder={option.price}  disabled={option.left=== 0? true : false}  />
             </div>
             <button className="btn green submit-pledge" disabled={option.left=== 0? true : false} onClick={()=>{
             decide("thanks")
@@ -80,7 +80,7 @@ const OptionsModal = ({options}) => {
               <p>Enter your pledge</p>
               <div className="input-submit">
                 <div className="btn enter-pledge">$
-                <input className="payment" type="number" />
+                <input name="payment" className="payment" type="number" />
                 </div>
                 <button onClick={()=>{
             decide("thanks")}} className="btn green submit-pledge" >Continue</button>
