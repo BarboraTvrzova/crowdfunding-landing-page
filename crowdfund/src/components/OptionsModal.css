@@ -1,0 +1,292 @@
+.options-modal {
+  max-width: 730px;
+  padding: 48.5px 48px;
+  background: #fff;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 8px;
+}
+.options-modal h2 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  padding-bottom: 16px;
+}
+
+.options-modal h3:hover {
+  color: #3cb3ab;
+  cursor: pointer;
+}
+
+.options-modal .left {
+  color: rgb(0, 0, 0);
+}
+
+.options-modal p {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+  color: #7a7a7a;
+  padding-bottom: 32px;
+}
+
+.options-modal h3 {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+}
+
+.options-modal span {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: #3cb3ab;
+  margin-left: 17px;
+}
+
+.modal-option {
+  display: flex;
+  height: 157px;
+  padding: 33px 28px 32px 76px;
+  position: relative;
+}
+
+.modal-option input {
+  margin-right: 36px;
+  position: absolute;
+  top: 41px;
+  left: 34px;
+  z-index: 100;
+}
+
+.modal-option input:before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  opacity: 0.15;
+  border: 1px solid rgb(0, 0, 0);
+  top: -6px;
+  left: -6px;
+  z-index: -200;
+}
+
+.modal-option input:after {
+  content: '';
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  position: absolute;
+  z-index: 300;
+}
+
+.modal-option input:checked:after {
+  content: '';
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #3cb3ab;
+  position: absolute;
+  z-index: 300;
+}
+
+.modal-option .left {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  margin-left: auto;
+}
+
+.modal-option .left span {
+  color: #7a7a7a;
+  margin-left: 0;
+}
+
+.close-modal {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+}
+
+.background-modal {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 184px;
+  height: 100%;
+  z-index: 800;
+}
+
+.background-modal::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.background-modal.modal-hidden {
+  display: none;
+}
+
+.active {
+  border: none;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.modal-option.card {
+  margin-bottom: 0;
+}
+.active-card {
+  border: 2px solid #3cb3ab;
+  border-radius: 8px;
+  height: 254px;
+  margin-bottom: 24px;
+}
+
+.margin {
+  margin-top: 24px;
+}
+
+.activecard-payment {
+  padding: 24px 28px;
+  height: 96px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.activecard-payment p {
+  padding-bottom: 0;
+}
+
+.input-submit {
+  height: 48px;
+  display: flex;
+  justify-content: space-between;
+}
+.enter-pledge {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  width: 100px;
+  padding: 15px 24px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  color: rgba(0, 0, 0, 0.25);
+}
+
+.submit-pledge {
+  width: 107px;
+  margin-left: 16px;
+}
+
+.payment {
+  width: 44px;
+  margin-left: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  border: none;
+}
+
+.card-payment {
+  display: none;
+}
+
+@media (max-width: 729px) {
+  .options-modal {
+    max-width: 327px;
+    padding: 32px 24px;
+    flex-direction: column;
+  }
+
+  .options-modal h3 {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    flex-direction: column;
+    margin-left: 40px;
+    padding-bottom: 24px;
+  }
+
+  .options-modal h3 span {
+    margin-left: 0;
+    margin-top: 8px;
+  }
+  .options-modal p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .modal-option {
+    height: 288px;
+    padding: 24px;
+  }
+
+  .modal-option .left {
+    position: absolute;
+    left: 24px;
+    bottom: 32px;
+  }
+
+  .modal-option .left span {
+    margin-top: 0;
+  }
+  .single-line {
+    padding-top: 14px;
+    padding-bottom: 37px;
+  }
+  .active-card {
+    height: 421px;
+  }
+  .activecard-payment {
+    flex-direction: column;
+    height: 130px;
+    padding: 23px;
+    justify-content: space-between;
+  }
+  .activecard-payment p {
+    font-size: 14px;
+  }
+
+  .modal-option input {
+    top: 41px;
+    left: 33px;
+    visibility: hidden;
+  }
+
+  .modal-option input:after {
+    content: '';
+    width: 13px;
+    height: 13px;
+    background: #fff;
+    position: absolute;
+    z-index: 300;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .modal-option input:checked:after {
+    content: '';
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #3cb3ab;
+    position: absolute;
+    z-index: 300;
+    opacity: 1;
+    visibility: visible;
+  }
+  .modal-option input:before {
+    visibility: visible;
+  }
+}
